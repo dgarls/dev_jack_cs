@@ -1,0 +1,3 @@
+# My funny site
+---
+alololol
