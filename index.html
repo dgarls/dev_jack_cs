@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>devon garls</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="topbar">
+        <a href="#top" onclick="scrollToTop()">Devon Garls</a>
+    </div>
+
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <div class="wrapper">
+        <div class="arrowboxUp" onmouseover="bringArrowDown(document.getElementById('uparrow'))" onmouseout="bringArrowUp(document.getElementById('uparrow'))">
+            <span class="material-symbols-outlined" id="uparrow" onclick="moveScreenUp()">
+                arrow_upward
+            </span>
+        </div>
+    </div>
+    
+    <div class="wrapper">
+        <div class="arrowboxDown" onmouseover="bringArrowUp(document.getElementById('downarrow'))" onmouseout="bringArrowDown(document.getElementById('downarrow'))">
+            <span class="material-symbols-outlined" id="downarrow" onclick="moveScreenDown()">
+                arrow_downward
+            </span>
+        </div>
+    </div>
+    
+
+
+    <div class ="panel" id="welcome">
+        <h1 id="name"></h1>
+        
+        
+    </div>
+
+    <div class="panel" id="programming">
+
+        <h1 id="title">programmering</h1>
+    </div>
+
+
+    <div class="panel" id="swimming">
+        <h1>im am a swimwer</h1>
+    </div>
+
+    <div class="panel" id="music">
+        <h1>music i think</h1>
+    </div>
+
+    <script src="myscript.js"></script>
+</body>
+
+</html>

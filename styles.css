@@ -1,0 +1,223 @@
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top, #ff5f5f, #ffc465);
+    animation: hue 2s linear infinite;
+}
+
+@keyframes hue {
+
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(30deg);
+    }
+}
+
+#progressbar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to top, #ff5f5f, #ffc465);
+}
+
+#progressbar:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to top, #ff5f5f, #ffc465);
+}
+
+#topbar {
+    display: flex;
+    top: -5%;
+    position: fixed;
+    height: 4%;
+    width: 100%;
+    font-size: 20px;
+    align-items: center;
+    justify-content: left;
+    background: rgb(3, 32, 49);
+    padding: 0px;
+    padding-left: 20px;
+    margin: 0px;
+    transition: 0.5s;
+    border-bottom: 1px solid black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: transform 0.1s ease-in-out;
+    margin-right: 10px;
+}
+
+
+a:hover {
+    color: rgb(144, 153, 255);
+    cursor: pointer;
+}
+
+a:visited{
+    color: white;
+}
+
+.panel {
+    width: 100vw;
+    min-height: 100vh;
+    border-bottom: 2px solid rgb(255, 157, 157);
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.arrowboxUp{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    height: 17vh;
+    width: 15vw;
+}
+
+.arrowboxDown{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    height: 17vh;
+    width: 15vw;
+}
+
+.material-symbols-outlined{
+    transform: scale(1.2);
+    position: fixed;
+    color: white;
+    transition: 0.3s ease-in-out;
+    user-select: none;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: grey
+}
+
+.material-symbols-outlined:hover{
+    background-color: rgb(85, 85, 85);
+}
+
+#uparrow{
+    top: -6vh;
+}
+
+#downarrow{
+    bottom: -6vh;
+}
+
+
+#welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("images/Welcome.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#name {
+    color: rgb(254, 118, 118);
+    border-right: 3px solid rgb(254, 118, 118);
+    text-shadow: 1px 1px 1px rgb(103, 0, 0);
+    height: 50px;
+    font-size: 50px;
+    user-select: none;
+    padding-right: 5px;
+    padding-bottom: 7px;
+}
+
+#programming {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgb(32, 32, 97), rgb(0, 0, 91));
+    color: white;
+}
+
+#swimming {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgb(0, 0, 91), rgb(50, 50, 100));
+    color: white;
+}
+
+#music {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgb(50, 50, 100), rgb(43, 146, 255));
+    color: white;
+}
+
+@keyframes blinking_cursor {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: rgb(254, 118, 118)
+    }
+}
+
+@keyframes dropIn {
+    from {
+        transform: translateY(-4%)
+    }
+
+    to {
+        transform: translateY(0)
+    }
+}
