@@ -1,6 +1,38 @@
-# My funny site
+# Jack and Devon's sick freaking GitHub Folder
+
+This is where we finna ball up and work on our sick projects together
+CodeQuest and websites and assembly machine language #litasl
+
+             ________________________________________________
+            /                                                \
+           |    _________________________________________     |
+           |   |                                         |    |
+           |   |  C:\> _                                 |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |_________________________________________|    |
+           |                                                  |
+            \_________________________________________________/
+                   \___________________________________/
+                ___________________________________________
+             _-'    .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.  --- `-_
+          _-'.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.  .-.-.`-_
+       _-'.-.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-`__`. .-.-.-.`-_
+    _-'.-.-.-.-. .-----.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-----. .-.-.-.-.`-_
+ _-'.-.-.-.-.-. .---.-. .-------------------------. .-.---. .---.-.-.-.`-_
+:-------------------------------------------------------------------------:
+`---._.-------------------------------------------------------------._.---'
+
 ---
-This is my awesome and crazy super awesome website that I made so that my teacher wouldn't get mad at me for playing crossword puzzles during class
 ## Best Github Repositories
 ---
 Awesome: https://github.com/sindresorhus/awesome#programming-languages
