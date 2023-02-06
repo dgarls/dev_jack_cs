@@ -35,7 +35,7 @@ function sleep(ms) {
 // Insane awesome typewriter function that appends to element with id 'name'
 async function typewrite() {
     var h = document.getElementById('name');
-    const sentences = ["Devon Garls", "Programmer", "Swimmer", "Music-er", "Devon Garls"];
+    const sentences = ["Jack rooshy", "Programmer", "Swimmer", "Music-er", "Jack Rooshy"];
 
     for (let i = 0; i < sentences.length; i++) {
 
