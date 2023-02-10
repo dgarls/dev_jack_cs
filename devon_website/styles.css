@@ -82,6 +82,17 @@ body {
     border-bottom: 1px solid black;
 }
 
+#github-logo{
+    height: 2vh;
+    width: auto;
+    border-radius: 5vh;
+    transition: 0.1s ease-in-out
+}
+
+#github-logo:hover{
+    background-color: rgb(144, 153, 255);
+}
+
 a {
     color: white;
     text-decoration: none;
