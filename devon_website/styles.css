@@ -102,7 +102,7 @@ a {
 }
 
 
-a:hover {
+a:hover, a:visited:hover {
     color: rgb(144, 153, 255);
     cursor: pointer;
 }
