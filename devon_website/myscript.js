@@ -111,7 +111,7 @@ function moveScreenUp() {
 
 window.onload = function () {
     typewrite();
-    setVars()
+    //setVars()
 };
 window.onscroll = function () {
     bringbar();
