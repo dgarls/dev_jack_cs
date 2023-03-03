@@ -5,4 +5,5 @@ succeed = 1 - fail
 required = int(input())
 max_attempts = int(input())
 
-print(math.pow(fail, required))
+chance = math.pow(succeed, required)
+print(chance)
