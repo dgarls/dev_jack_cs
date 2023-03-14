@@ -37,7 +37,8 @@ def move(coord):
     if isValid([row-1, col]) and [row-1, col] != previous_move and tower[row-1][col] == letter:
         print("Moving up")
         previous_move = [row, col]
-        return move([row-1, col])
+        if move([row-1, col]):
+            return True
 
     # Checking bottom
     if isValid([row + 1, col]) and [row + 1, col] != previous_move and tower[row + 1][col] == letter:
