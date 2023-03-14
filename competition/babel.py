@@ -18,7 +18,7 @@ def move(coord):
     global counter
 
     if counter == 0:
-        print(f"Coord, Destination: {coord}, {destination}")
+        #print(f"Coord, Destination: {coord}, {destination}")
         counter += 1
 
     if coord == destination:
@@ -29,34 +29,32 @@ def move(coord):
     col = int(coord[1])
     global previous_move
     global letter
-    
 
-    print(f"Row, col: {row}, {col}")
+    #print(f"Row, col: {row}, {col}")
 
     # Checking top
-    if isValid([row-1, col]) and [row-1, col] != previous_move and tower[row-1][col] == letter:
-        print("Moving up")
-        previous_move = [row, col]
+    if isValid([row-1, col]) and [row-1, col] not in previous_move and tower[row-1][col] == letter:
+        previous_move.append([row, col])
         if move([row-1, col]):
             return True
 
     # Checking bottom
-    if isValid([row + 1, col]) and [row + 1, col] != previous_move and tower[row + 1][col] == letter:
-        print("Moving down")
-        previous_move = [row, col]
-        return move([row + 1, col])
+    if isValid([row + 1, col]) and [row + 1, col] not in previous_move and tower[row + 1][col] == letter:
+        previous_move.append([row, col])
+        if move([row + 1, col]):
+            return True
 
     # Checking Left
-    if isValid([row, col-1]) and [row, col-1] != previous_move and tower[row][col-1] == letter:
-        print("Moving left")
-        previous_move = [row, col]
-        return move([row, col - 1])
+    if isValid([row, col-1]) and [row, col-1] not in previous_move and tower[row][col-1] == letter:
+        previous_move.append([row, col])
+        if move([row, col - 1]):
+            return True
 
     # Checking right
-    if isValid([row, col+1]) and [row, col + 1] != previous_move and tower[row][col + 1] == letter:
-        print("Moving right")
-        previous_move = [row, col]
-        return move([row, col + 1])
+    if isValid([row, col+1]) and [row, col + 1] not in previous_move and tower[row][col + 1] == letter:
+        previous_move.append([row, col])
+        if move([row, col + 1]):
+            return True
     
     counter = 0
     return False
