@@ -15,22 +15,14 @@ def isValid(coord):
 def move(coord):
 
     global destination
-    global counter
-
-    if counter == 0:
-        #print(f"Coord, Destination: {coord}, {destination}")
-        counter += 1
 
     if coord == destination:
-        counter = 0
         return True
     
     row = int(coord[0])
     col = int(coord[1])
     global previous_move
     global letter
-
-    #print(f"Row, col: {row}, {col}")
 
     # Checking top
     if isValid([row-1, col]) and [row-1, col] not in previous_move and tower[row-1][col] == letter:
@@ -56,7 +48,6 @@ def move(coord):
         if move([row, col + 1]):
             return True
     
-    counter = 0
     return False
 
 
