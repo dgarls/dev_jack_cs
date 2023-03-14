@@ -1,35 +1,64 @@
-def move(coord):
-    row = coord[0]
-    col = coord[1]
-    global previous_move
-    global letter
-    global destination
-
-    print("Previous move: ", previous_move)
-
-    if tower[row-1][col] == letter and tower[row-1][col] != previous_move:
-        previous_move = [row-1, col]
-        move([row-1, col])
-    elif tower[row][col-1] == letter and tower[row][col-1] != previous_move:
-        previous_move = [row, col -1]
-        move([row, col-1])
-    elif tower[row + 1][col] == letter and tower[row + 1][col] != previous_move:
-        previous_move = [row+1, col]
-        move([row + 1, col])
-    elif tower[row][col + 1] == letter and tower[row][col + 1] != previous_move:
-        previous_move = [row, col + 1]
-        move([row, col + 1])
-    else:
-        return False
-
-    if coord == destination:
-        return True
-    
-
 l = input().split()
+counter = 0
 rows = int(l[0])
 cols = int(l[1])
 tower = []
+
+def isValid(coord):
+    global rows
+    global cols
+    if coord[0] < rows and coord[0] > -1 and coord[1] < cols and coord[1] > -1:
+        return True
+    
+    return False
+
+def move(coord):
+
+    global destination
+    global counter
+
+    if counter == 0:
+        print(f"Coord, Destination: {coord}, {destination}")
+        counter += 1
+
+    if coord == destination:
+        counter = 0
+        return True
+    
+    row = int(coord[0])
+    col = int(coord[1])
+    global previous_move
+    global letter
+    
+
+    print(f"Row, col: {row}, {col}")
+
+    # Checking top
+    if isValid([row-1, col]) and [row-1, col] != previous_move and tower[row-1][col] == letter:
+        print("Moving up")
+        previous_move = [row, col]
+        return move([row-1, col])
+
+    # Checking bottom
+    if isValid([row + 1, col]) and [row + 1, col] != previous_move and tower[row + 1][col] == letter:
+        print("Moving down")
+        previous_move = [row, col]
+        return move([row + 1, col])
+
+    # Checking Left
+    if isValid([row, col-1]) and [row, col-1] != previous_move and tower[row][col-1] == letter:
+        print("Moving left")
+        previous_move = [row, col]
+        return move([row, col - 1])
+
+    # Checking right
+    if isValid([row, col+1]) and [row, col + 1] != previous_move and tower[row][col + 1] == letter:
+        print("Moving right")
+        previous_move = [row, col]
+        return move([row, col + 1])
+    
+    counter = 0
+    return False
 
 
 for i in range(rows):
@@ -41,9 +70,6 @@ tests = int(input())
 for test in range(tests):
     coords = input().split()
     start = [int(coords[0]), int(coords[1])]
-    global previous_move
-    global letter
-    global destination
     previous_move = start
     letter = tower[int(coords[0])][int(coords[1])]
     destination = [int(coords[2]), int(coords[3])]
