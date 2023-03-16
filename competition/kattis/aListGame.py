@@ -15,13 +15,12 @@ def listGame(num):
     while x < int(num / 2) + 1:
         if num % x == 0:
             quotient = num / x
-            print("num, x, quotient: ", num, x, quotient)
             if isPrime(x) and isPrime(quotient):
-                return 2
+                return count + 1
             elif isPrime(x) and not isPrime(quotient):
-                return listGame(quotient)
+                return count + listGame(quotient)
             elif not isPrime(x) and not isPrime(quotient):
-                return listGame(x) + listGame(quotient)
+                return count + listGame(x) + listGame(quotient)
         x += 1
     return count
 
